@@ -26,10 +26,16 @@ class EEPayMonthly extends Page {
     }
 
     public async acceptCookies() {
-        const iframe = 0;
-        await browser.switchToFrame(iframe);
-        await this.clickAcceptCookiesButton();
-        await browser.switchToParentFrame();
+        try{
+            const iframe = 0;
+            await browser.switchToFrame(iframe);
+            await this.clickAcceptCookiesButton();
+            await browser.switchToParentFrame();
+        }
+        catch(Exception){
+
+        }
+        
     }
 
     public async chooseBrand(brandName: string) {

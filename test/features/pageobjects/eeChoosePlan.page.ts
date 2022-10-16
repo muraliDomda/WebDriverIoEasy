@@ -8,7 +8,8 @@ import Page from './page';
 class EEChoosePlan extends Page {
 
     private get bestSellingPlanButton() {
-        return $("//span[text()='Best-selling plan']/ancestor::div[@data-content-id='plan-item']/descendant::button[text()='Choose plan']");
+        // return $("//span[text()='Best-selling plan']/ancestor::div[@data-content-id='plan-item']/descendant::button[text()='Choose plan']");
+        return $("//*[text()='Best-selling plan']/ancestor::div[contains(@data-content-id,'plan-item')]/descendant::button[contains(text(),'Choose')]");
     }
 
     public get addonsPopup() {

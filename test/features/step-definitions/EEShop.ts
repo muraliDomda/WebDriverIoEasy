@@ -39,6 +39,7 @@ When(/^I choose any available plan$/, async () => {
 });
 
 Then(/^I see You might also like pop up$/, async () => {
+  await browser.pause(5000)
   var windowHandles = await browser.getWindowHandles();
   await browser.switchToWindow(windowHandles[0]);
   await expect(await EEChoosePlan.addonsPopup).toExist();
@@ -64,6 +65,6 @@ Then(/^I choose Yes, See Watches button$/, async () => {
 });
 
 Then(/^I should land on Pay Montly Watches page$/, async () => {
-  await expect(await EEPayMonthlyWatches.getWatchesPageHeading()).toContain(" Watches99");
+  await expect(await EEPayMonthlyWatches.getWatchesPageHeading()).toContain(" Watches");
 });
 

@@ -1,6 +1,6 @@
 Feature: BT EE Mobile Brand selection Demo Feature
 
-  @eeShopBrandSelection @eeShop1
+  @eeShopBrandSelection @eeShop11
   Scenario Outline: Validate Choosen Brand Products only Displays in Popular Brands Page "<ScenarioId>""
     Given I am on the PayM Handset Gallery page in acquisition journey
     When I choose <BrandName> in Handset Gallery page

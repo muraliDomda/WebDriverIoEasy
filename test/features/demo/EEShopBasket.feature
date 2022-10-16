@@ -11,7 +11,7 @@ Feature: BT EE Mobile Basket Demo Feature
     And I see only above added item is displayed in Basket
 
 
- @eeShopBasket @eeShop1
+ @eeShopBasket @eeShop
   Scenario: TC_002: Validate user is displayed with You might also Like Popup - Yes,See Watches
     Given I am on the PayM Handset Gallery page in acquisition journey
     When I choose any product
