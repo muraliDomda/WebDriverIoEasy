@@ -6,6 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "wdio:eeshop:edge": "wdio run runners/edge.wdio.conf.ts --cucumberOpts.tagExpression='@eeShop'",
+        "wdio:eeshop:local": "wdio run runners/local.wdio.conf.ts --cucumberOpts.tagExpression='@eeShop'",
         "wdio:eeshop:chrome": "wdio run runners/chrome.wdio.conf.ts --cucumberOpts.tagExpression='@eeShop'",
         "wdio:eeshop:firefox": "wdio run runners/firefox.wdio.conf.ts --cucumberOpts.tagExpression='@eeShop'",
         "wdio:eeshop:browserstack": "wdio run runners/bs.wdio.ts --cucumberOpts.tagExpression='@eeShop'",
@@ -24,6 +25,7 @@
         "@wdio/sauce-service": "^7.16.13",
         "@wdio/selenium-standalone-service": "^7.25.0",
         "@wdio/spec-reporter": "^7.25.0",
+        "appium": "^1.22.3",
         "chromedriver": "^106.0.0",
         "dotenv": "^16.0.3",
         "dotenv-webpack": "^8.0.1",

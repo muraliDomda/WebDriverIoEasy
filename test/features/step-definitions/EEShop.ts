@@ -10,7 +10,7 @@ import EEPayMonthlyWatches from '../pageobjects/eePayMonthlyWatches.page';
 
 Given(/^I am on the PayM Handset Gallery page in acquisition journey$/, async () => {
   await EEPayMonthly.NavigateToPayMontlyPage();
-  // await EEPayMonthly.acceptCookies();
+  await EEPayMonthly.acceptCookies();
 });
 
 When(/^I choose (\w+) in Handset Gallery page$/, async (brandname) => {
@@ -65,6 +65,6 @@ Then(/^I choose Yes, See Watches button$/, async () => {
 });
 
 Then(/^I should land on Pay Montly Watches page$/, async () => {
-  await expect(await EEPayMonthlyWatches.getWatchesPageHeading()).toContain(" Watches");
+  await expect(await EEPayMonthlyWatches.getWatchesPageHeading()).toContain(" Watches999");
 });
 

@@ -1,9 +1,7 @@
 // @ts-nocheck
 import { Status } from '@cucumber/cucumber'
 import type { Options } from '@wdio/types'
-import { Console } from 'console';
 import fs from "fs";
-import { json } from 'stream/consumers';
 const video = require('wdio-video-reporter');
 export const config: Options.Testrunner = {
     reporterSyncInterval: 10 * 1000,
@@ -86,8 +84,10 @@ export const config: Options.Testrunner = {
     //
     capabilities: [
         // {
-        //     maxInstances: 2,
+        //     maxInstances: 1,
         //     browserName: 'MicrosoftEdge',
+        //     version:'105.0.1343.53',
+        //     path:'./'
         // },
         {
             maxInstances: 2,
@@ -96,7 +96,7 @@ export const config: Options.Testrunner = {
         {
             maxInstances: 2,
             acceptInsecureCerts: true,
-            timeouts: { implicit: 30000, pageLoad: 30000, script: 30000 },
+            timeouts: { implicit: 20000, pageLoad: 20000, script: 30000 },
             //
             browserName: 'chrome',
             excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -155,15 +155,8 @@ export const config: Options.Testrunner = {
     // services: ['chromedriver'],
     // services: ['selenium-standalone'],
     // services: ['selenium-standalone'],
-    services: ['geckodriver','chromedriver','edgedriver'],
-    // services: ['geckodriver','chromedriver'],
-    // services: ['browserstack'],
-    // user: 'muralid_6G7je3',
-    // key: 'dzGiDsrUefh8DpAUzyjc',
-    // services: ['sauce'],
-    // user: 'oauth-murali.domda-6e62e',
-    // key: '51203629-95ea-4fb4-afd3-f56c0c3b1070',
-
+    services: ['geckodriver','chromedriver'],
+    // services: ['geckodriver'],
     // services: [
     //     ['selenium-standalone', { drivers: { firefox: 'latest', chrome: true, chromiumedge: 'latest' } }]
     // ],
@@ -310,9 +303,8 @@ export const config: Options.Testrunner = {
      * @param {ITestCaseHookParameter} world    world object containing information on pickle and test step
      * @param {Object}                 context  Cucumber World object
      */
-    beforeScenario: function (world, context) {
-        console.log('my world is' + JSON.stringify(world))
-    },
+    // beforeScenario: function (world, context) {
+    // },
     /**
      *
      * Runs before a Cucumber Step.

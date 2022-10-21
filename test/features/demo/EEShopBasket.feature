@@ -1,5 +1,4 @@
-Feature: BT EE Mobile Basket Demo Feature
-
+Feature: EE Mobile Shop Basket
  @eeShopBasket @eeShop
   Scenario: TC_001: Validate user is displayed with You might also Like Popup - No Thanks
     Given I am on the PayM Handset Gallery page in acquisition journey
